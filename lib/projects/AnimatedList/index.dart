@@ -69,4 +69,22 @@ class _AnimatedListViewState extends State<AnimatedListView> {
         duration: const Duration(milliseconds: 500));
     _items.removeAt(0);
   }
+
+  Widget sizeIt(BuildContext context, int index, animation) {
+    int item = _items[index];
+    TextStyle textStyle = Theme.of(context).textTheme.headline4;
+    return SizeTransition(
+      axis: Axis.vertical,
+      sizeFactor: animation,
+      child: SizedBox(
+        height: 128.0,
+        child: Card(
+          color: Colors.primaries[item % Colors.primaries.length],
+          child: Center(
+            child: Text('Item $item', style: textStyle),
+          ),
+        ),
+      ),
+    );
+  }
 }
