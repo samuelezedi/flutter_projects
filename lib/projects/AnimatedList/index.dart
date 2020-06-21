@@ -87,4 +87,21 @@ class _AnimatedListViewState extends State<AnimatedListView> {
       ),
     );
   }
+
+  Widget rotateIt(BuildContext context, int index, animation) {
+    int item = _items[index];
+    TextStyle textStyle = Theme.of(context).textTheme.headline4;
+    return RotationTransition(
+      turns: animation,
+      child: SizedBox(
+        height: 128.0,
+        child: Card(
+          color: Colors.primaries[item % Colors.primaries.length],
+          child: Center(
+            child: Text('Item $item', style: textStyle),
+          ),
+        ),
+      ),
+    );
+  }
 }
