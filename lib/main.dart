@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterarticles/projects/AnimatedList/index.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,6 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      routes: {
+        '/animaged_list' : (context) => AnimatedListView()
+      },
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
