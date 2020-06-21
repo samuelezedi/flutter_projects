@@ -39,7 +39,10 @@ class _AnimatedListViewState extends State<AnimatedListView> {
       position: Tween<Offset>(
         begin: const Offset(-1, 0),
         end: Offset(0, 0),
-      ).animate(animation),
+      ).animate(CurvedAnimation(
+          parent: animation,
+          curve: Curves.bounceIn,
+          reverseCurve: Curves.bounceOut)),
       child: SizedBox( // Actual widget to display
         height: 128.0,
         child: Card(
