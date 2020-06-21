@@ -104,4 +104,31 @@ class _AnimatedListViewState extends State<AnimatedListView> {
       ),
     );
   }
+
+  Widget resizeRotateAndSlide(BuildContext context, int index, animation) {
+    int item = _items[index];
+    TextStyle textStyle = Theme.of(context).textTheme.headline4;
+    return SlideTransition(
+      position: Tween<Offset>(
+        begin: const Offset(-1, 0),
+        end: Offset(0, 0),
+      ).animate(animation),
+      child: RotationTransition(
+        turns: animation,
+        child: SizeTransition(
+          axis: Axis.vertical,
+          sizeFactor: animation,
+          child: SizedBox(
+            height: 128.0,
+            child: Card(
+              color: Colors.primaries[item % Colors.primaries.length],
+              child: Center(
+                child: Text('Item $item', style: textStyle),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
