@@ -45,6 +45,11 @@ class _SliderShowState extends State<SliderShow> {
                 data: SliderThemeData(
                   rangeValueIndicatorShape: PaddleRangeSliderValueIndicatorShape(),
                 ),
+                child: RangeSlider(
+                  values: _rangeSliderDiscreteValues,
+                  max: 100,
+                  min: 0,
+                ),
               ),
             )
           ],
