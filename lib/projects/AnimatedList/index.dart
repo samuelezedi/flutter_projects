@@ -76,7 +76,7 @@ class _AnimatedListViewState extends State<AnimatedListView> {
 
   void removeItem(index) {
     listKey.currentState.removeItem(
-        index, (_, animation) => slideIn(context, index, animation),
+        0, (_, animation) => slideIn(context, 0, animation),
         duration: const Duration(milliseconds: 500));
     _items.removeAt(index);
   }
