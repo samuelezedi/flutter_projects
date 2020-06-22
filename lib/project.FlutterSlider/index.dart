@@ -49,6 +49,7 @@ class _SliderShowState extends State<SliderShow> {
                   values: _rangeSliderDiscreteValues,
                   max: 100,
                   min: 0,
+                  divisions: 5,
                 ),
               ),
             )
