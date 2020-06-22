@@ -56,7 +56,7 @@ class _SliderShowState extends State<SliderShow> {
                   ),
                   onChanged: (value){
                     setState(() {
-
+                      _rangeSliderDiscreteValues = value;
                     });
                   },
                 ),
