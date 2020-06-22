@@ -50,6 +50,10 @@ class _SliderShowState extends State<SliderShow> {
                   max: 100,
                   min: 0,
                   divisions: 5,
+                  labels: RangeLabels(
+                    _rangeSliderDiscreteValues.start.round().toString(),
+                    _rangeSliderDiscreteValues.end.round().toString()
+                  ),
                 ),
               ),
             )
