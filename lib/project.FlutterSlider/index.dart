@@ -27,7 +27,9 @@ class _SliderShowState extends State<SliderShow> {
                       valueIndicatorShape: PaddleSliderValueIndicatorShape(),
                 ),
                 child: Slider(
-
+                    value: _sliderDiscreteValue,
+                    min: 0,
+                  max: 100,
                 ),
               ),
             )
