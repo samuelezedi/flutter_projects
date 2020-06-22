@@ -54,6 +54,11 @@ class _SliderShowState extends State<SliderShow> {
                     _rangeSliderDiscreteValues.start.round().toString(),
                     _rangeSliderDiscreteValues.end.round().toString()
                   ),
+                  onChanged: (value){
+                    setState(() {
+
+                    });
+                  },
                 ),
               ),
             )
