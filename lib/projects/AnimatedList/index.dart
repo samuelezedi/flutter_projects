@@ -29,6 +29,12 @@ class _AnimatedListViewState extends State<AnimatedListView> {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          addItem();
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 
@@ -43,12 +49,17 @@ class _AnimatedListViewState extends State<AnimatedListView> {
           parent: animation,
           curve: Curves.bounceIn,
           reverseCurve: Curves.bounceOut)),
-      child: SizedBox( // Actual widget to display
-        height: 128.0,
-        child: Card(
-          color: Colors.primaries[item % Colors.primaries.length],
-          child: Center(
-            child: Text('Item $item', style: textStyle),
+      child: GestureDetector(
+        onTap: (){
+          removeItem(index);
+        },
+        child: SizedBox( // Actual widget to display
+          height: 128.0,
+          child: Card(
+            color: Colors.primaries[item % Colors.primaries.length],
+            child: Center(
+              child: Text('Item $item', style: textStyle),
+            ),
           ),
         ),
       ),
@@ -63,11 +74,11 @@ class _AnimatedListViewState extends State<AnimatedListView> {
       ..addAll(_items);
   }
 
-  void removeItem() {
+  void removeItem(index) {
     listKey.currentState.removeItem(
-        0, (_, animation) => slideIn(context, 0, animation),
+        index, (_, animation) => slideIn(context, index, animation),
         duration: const Duration(milliseconds: 500));
-    _items.removeAt(0);
+    _items.removeAt(index);
   }
 
   Widget sizeIt(BuildContext context, int index, animation) {

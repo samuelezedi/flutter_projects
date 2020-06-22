@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       routes: {
-        '/animated_list' : (context) => AnimatedListView(),
-        '/slider' : (context) => SliderShow()
+//        '/' : (context) => MyHomePage(),
+        'animated_list' : (context) => AnimatedListView(),
+        'slider' : (context) => SliderShow()
       },
       theme: ThemeData(
 
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ListTile(
               onTap: (){
-                Navigator.pushNamed(context, 'animaged_list');
+                Navigator.pushNamed(context, 'animated_list');
               },
               title: Text('Animated List'),
             ),
