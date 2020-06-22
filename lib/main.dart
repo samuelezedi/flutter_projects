@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ListTile(
               onTap: (){
-                Navigator.pushNamed(context, 'a');
+                Navigator.pushNamed(context, 'animaged_list');
               },
               title: Text('Animated List'),
             ),
