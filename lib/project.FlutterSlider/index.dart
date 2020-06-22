@@ -41,8 +41,11 @@ class _SliderShowState extends State<SliderShow> {
               ),
             ),
             Expanded(
-              child:
-              ,
+              child: SliderTheme(
+                data: SliderThemeData(
+                  rangeValueIndicatorShape: PaddleRangeSliderValueIndicatorShape(),
+                ),
+              ),
             )
           ],
         ),
