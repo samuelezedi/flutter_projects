@@ -32,9 +32,17 @@ class _SliderShowState extends State<SliderShow> {
                   max: 100,
                   divisions: 5,
                   label: _sliderDiscreteValue.round().toString(),
-
+                  onChanged: (value) {
+                      setState(() {
+                        _sliderDiscreteValue=value;
+                      });
+                  },
                 ),
               ),
+            ),
+            Expanded(
+              child:
+              ,
             )
           ],
         ),
