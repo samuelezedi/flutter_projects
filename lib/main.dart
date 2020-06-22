@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterarticles/project.FlutterSlider/index.dart';
 import 'package:flutterarticles/projects/AnimatedList/index.dart';
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       routes: {
-        '/animated_list' : (context) => AnimatedListView()
+        '/animated_list' : (context) => AnimatedListView(),
+        '/slider' : (context) => SliderShow()
       },
       theme: ThemeData(
 
@@ -34,14 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
