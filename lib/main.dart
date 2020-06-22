@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               onTap: (){
-
+                Navigator.pushNamed(context, 'slider');
               },
               title: Text('Sliders'),
             )
